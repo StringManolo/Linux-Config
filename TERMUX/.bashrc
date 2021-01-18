@@ -85,3 +85,6 @@ alias pkga='pkg list-all'
 alias pkgi='pkg list-installed'
 alias lynxd='lynx --dump'
 alias lynxs='lynx --source'
+alias publicip='curl http://checkip.amazonaws.com/ --silent'
+
+
