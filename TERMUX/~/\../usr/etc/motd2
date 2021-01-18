@@ -1,0 +1,27 @@
+Bash Alias
+
+js 'console.log(`Actual Date: ${new Date()}`);'
+c++ '#include <iostream>
+int main () {
+  std::cout << "Hello world!";
+  return 0;
+}
+
+l='ls'
+la='ls -a'
+c='clear'
+cl='clear && ls'
+v='vim'
+..='cd ..'
+...='cd ../..'
+....='cd ../../..'
+.....='cd ../../../..'
+pserv='python -m http.server'
+gacp='git add --all && git commit -m "uploaded by gacp" && git push'
+ping='ping -w 5'
+pkga='pkg list-all'
+pkgi='pkg list-installed'
+lynxd='lynx --dump'
+lynxs='lynx --source'
+publicip='curl http://checkip.amazonaws.com/ --silent'
+
