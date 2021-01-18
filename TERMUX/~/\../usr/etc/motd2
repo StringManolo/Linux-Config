@@ -7,6 +7,7 @@ int main () {
   return 0;
 }
 
+ub='source ~/.bashrc
 l='ls'
 la='ls -a'
 c='clear'
@@ -25,3 +26,5 @@ lynxd='lynx --dump'
 lynxs='lynx --source'
 publicip='curl http://checkip.amazonaws.com/ --silent'
 
+u='~/../usr/'
+d='~/storage/downloads'

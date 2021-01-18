@@ -1,10 +1,8 @@
-# Termux .bashrc file 
-
 # Handle commands not found
 if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
-        command_not_found_handle() {
-                /data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
-        }
+	command_not_found_handle() {
+		/data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
+	}
 fi
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -45,7 +43,7 @@ export GREP_COLOR="1;32"
 # enable color support of ls, grep and ip and also add handy aliases
 if [[ -x /usr/bin/dircolors ]]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-        alias ls='ls --color=auto'
+	alias ls='ls --color=auto'
     alias grep='grep --color=auto'
     alias ip='ip -color=auto'
 fi
@@ -69,6 +67,7 @@ alias js='qjs ~/bashLanguageExtensions/js $1'
 alias c++='qjs ~/bashLanguageExtensions/cpp $1'
 
 ## Alias definitions
+alias ub='source ~/.bashrc'
 alias l='ls'
 alias la='ls -a'
 alias c='clear'
@@ -87,4 +86,8 @@ alias lynxd='lynx --dump'
 alias lynxs='lynx --source'
 alias publicip='curl http://checkip.amazonaws.com/ --silent'
 
+# dir alias
+# Use with autocd
+alias u='~/../usr/'
+alias d='~/../storage/downloads/'
 
