@@ -85,5 +85,3 @@ alias pkga='pkg list-all'
 alias pkgi='pkg list-installed'
 alias lynxd='lynx --dump'
 alias lynxs='lynx --source'
-
-#lynx --dump "https://google.com/search?q=site:'$(echo "$1")'ext:doc+|+ext:docx+|+ext:odt+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv"'
