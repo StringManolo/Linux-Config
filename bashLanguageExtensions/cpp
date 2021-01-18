@@ -1,0 +1,29 @@
+import * as std from "std";
+import * as os from "os";
+
+let run = command => {
+  let p = std.popen(command, "r"),
+  msg = "",
+  r = "";
+  while(( r = p.getline() ) != null) {
+    msg += r + "\n";
+  }
+  return msg;
+}
+
+let cppFunctions = `#include <iostream>
+`;
+
+let result ="";
+try {
+  let fd = std.open(".internalCppEvaling.cpp", "w+");
+  fd.puts(`${cppFunctions}${scriptArgs.splice(1,1)}`);
+  fd.close();
+  result = run(`g++ -o .internalCppCompiled .internalCppEvaling.cpp 2>&1 && chmod +775 .internalCppCompiled && termux-elf-cleaner .internalCppCompiled > /dev/null && ./.internalCppCompiled`);
+  run("rm .internalCppEvaling.cpp && rm .internalCppCompiled");
+
+} catch(err) {
+  result = `Error running the code: ${err}`;
+}
+
+console.log(result);
